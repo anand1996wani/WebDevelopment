@@ -27,32 +27,10 @@
 
     
 
-    <!--Firebase-->
-
-
-    
-    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAY1Jif3ni8AAcAwPK_cZict1a8T5nBcNU",
-        authDomain: "smartcontract1996.firebaseapp.com",
-        databaseURL: "https://smartcontract1996.firebaseio.com",
-        projectId: "smartcontract1996",
-        storageBucket: "smartcontract1996.appspot.com",
-        messagingSenderId: "110733921386"
-      };
-      firebase.initializeApp(config);
-      console.log("Firebase Done");
-    </script>
-
-
-
-
     <!--TOP BAR-->
     <div class="top-bar">
       <div class="columns medium-2">
-        <h4 id = "propertyTitle"></h4>
+        <h4>Property Title</h4>
       </div>
       <div class="columns medium-2" class="menu-text">        
         <ul class="menu vertical">
@@ -85,7 +63,7 @@
 
       <div class = "row" style="width: 1000px" style="height: 500px">
         <h1></h1>
-        <img src="./images/propertyId1.jpg">
+        <img src="./images/p1.jpeg">
       </div>
 
       <div id = "overview" class="row" style="width: 1000px" style="height: 1000px">
@@ -93,7 +71,7 @@
         <p>
           <h3>OVERVIEW</h3>
         </p>
-         <p id="overviewParameter">
+         <p id = "overview">Budget Fit. Status Superhit. When you think of buying a home you first see your budget then compromise your home but rarely you find a home that looks rich and is also surprisingly within your budget. A home that fits your budget and upgrades your status. A home that fits your family and upgrades their status. Finally, where everything just fits in perfectly. Suvarna Nagri - a project of 1 & 2 BHK homes by Arkay & Jare Group at Alandi. In this blessed land of Alandi you get all the comforts for a supreme living. Situated conveniently in the heart of Alandi with connectivity to every corner of the city. It is also well connected to all the important landmarks like Chakan, Airport, International Convention Centre - Moshi, Bhosari, Shivajinagar, Pimpri, perfertly sitting in the midst of all these prominent destinations. The close vicinity to workspace and plenty of shopping and entertainment options makes it a desirable location.
           </p>
       </div>
     
@@ -101,7 +79,7 @@
         <p>
           <h3>FLOOR PLAN</h3>
         </p>
-        <table id = "plan" class="striped hover stack table-scroll">
+        <table class="striped hover stack table-scroll">
           <tr>
             <th>Type</th>
             <th>Area (Sq. Ft.)</th>
@@ -109,14 +87,16 @@
             <th>Total Price</th>
           </tr>
           <tr>
-            <td id = "type">
-            </td>
-            <td id = "area">
-            </td>
-            <td id = "rate">
-            </td>
-            <td id = "total">
-            </td>
+            <td>1 BHK</td>
+            <td>594</td>
+            <td>2799</td>
+            <td>16,62,606</td>
+          </tr>
+          <tr>
+            <td>2 BHK</td>
+            <td>792</td>
+            <td>2799</td>
+            <td>22,16,808</td>
           </tr>
         </table>
       </div>
@@ -126,10 +106,23 @@
           <h3>LOCATION DETAILS</h3>
         </p>
         <div class="columns medium-2">
-          <img src="./images/google-maps.jpg">
+          <img src="./images/google-maps.png">
         </div>
         <div class="columns medium-10">
           <div id="map">
+            <script>
+              function initMap() {
+                var uluru = {lat: -25.363, lng: 131.044};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+                });
+                var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+              }
+            </script>
             <script async defer
               src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJSz4L64WE1g9WPfp43Pb_hKgokne0FsY&callback=initMap">
             </script>
@@ -143,32 +136,32 @@
         <p>
           <h3>AMENITIES</h3>
         </p>
-        <div  id  = "24-Hour-Water-Supply" class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/24-Hour-Water-Supply.jpg" align="Centre">
+        <div class="columns medium-2" class="card" style="width: 200px">
+          <img src="./images/24-Hour-Water-Supply.png" align="Centre">
           <div class="card-section">
             24 Hour Water Supply
           </div>
         </div>
         <div  class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/24-Hours-Security.jpg" align="Centre">
+          <img src="./images/24-Hours-Security.png" align="Centre">
           <div class="card-section">
             24 Hour Security
           </div>
         </div>
         <div   class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/Club-House.jpg" align="Centre">
+          <img src="./images/Club-House.png" align="Centre">
           <div class="card-section">
             Club House
           </div>
         </div>
         <div  class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/Firefighting-Equipment.jpg" align="Centre">
+          <img src="./images/Firefighting-Equipment.png" align="Centre">
           <div class="card-section">
             Firefighting Equipment
           </div>
         </div>
       <div  class="columns medium-2" class="card" style="width: 200px">
-        <img src="./images/Kids-Play-Area.jpg" align="Centre">
+        <img src="./images/Kids-Play-Area.png" align="Centre">
           <div class="card-section">
             Kid's Play Area
           </div>
@@ -179,39 +172,40 @@
 
     <div class="row" style="width: 1000px">
         <div class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/Wi-fi-Conectivity.jpg" align="Centre">
+          <img src="./images/Wi-fi-Conectivity.png" align="Centre">
           <div class="card-section">
             Wifi Connectivity
           </div>
         </div>
         <div  class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/Meditation-Center.jpg" align="Centre">
+          <img src="./images/Meditation-Center.png" align="Centre">
           <div class="card-section">
             Meditation Center
           </div>
         </div>
         <div   class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/senior-citizen-park.jpg" align="Centre">
+          <img src="./images/senior-citizen-park.png" align="Centre">
           <div class="card-section">
             Senior Citizen Park
           </div>
         </div>
         <div  class="columns medium-2" class="card" style="width: 200px">
-          <img src="./images/Power-Backup.jpg" align="Centre">
+          <img src="./images/Power-Backup.png" align="Centre">
           <div class="card-section">
             Power Backup
           </div>
         </div>
       <div  class="columns medium-2" class="card" style="width: 200px">
-        <img src="./images/joggingAmenities.jpg" align="Centre">
+        <img src="./images/joggingAmenities.png" align="Centre">
           <div class="card-section">
             Jogging Amenities
           </div>
         </div>
 
     </div>
-    
-    <script src="./js/firebaseReadData.js"></script>
+
+
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>

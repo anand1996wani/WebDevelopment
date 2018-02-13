@@ -1,0 +1,10 @@
+var ref = firebase.database().ref('/property-details/property-id1/overview');
+
+ref.on("value", function(snapshot) {
+   //console.log(snapshot.val());
+   var st = document.getElementById('overview_para');
+   st.innerHTML = snapshot.val();	
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+
